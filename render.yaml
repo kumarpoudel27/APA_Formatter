@@ -2,10 +2,7 @@ services:
   - type: web
     name: apa-formatter-backend
     env: python
-    buildCommand: |
-      python -m pip install --upgrade pip
-      pip install -r requirements.txt
-    startCommand: uvicorn wsgi:application --host 0.0.0.0 --port $PORT
+    buildCommand: pip install -r requirements.txt
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.11
