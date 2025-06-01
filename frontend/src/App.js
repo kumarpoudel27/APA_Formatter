@@ -33,7 +33,7 @@ function App() {
     } else {
       formData.append("text", inputText);
     }
-    const res = await fetch("http://localhost:8000/format-apa/", {
+    const res = await fetch(""https://apa-formatter-backend.onrender.com/format-apa/", {
       method: "POST",
       body: formData,
     });
